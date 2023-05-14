@@ -1,0 +1,17 @@
+<package> nXDS
+<include> "nXDS.h"
+<include> msg
+<follow> msg
+
+<opts> "d:x:n:e:"
+<sort>
+	-d <serial device> -- Port connected to nXDS
+	-x <drive number> -- Do not read or write to specifed drive
+	-n <remote node> -- for secondary telemetry reports
+	-e <remote experiment> -- for secondary telemetry reports
+<init>
+  nxds_init_options(argc, argv);
+
+<package> msghdr_default
+<var>
+  char *msg_hdr_default = "nXDS";

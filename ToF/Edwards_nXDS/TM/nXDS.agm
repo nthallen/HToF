@@ -1,0 +1,41 @@
+ModuleDef nXDS [ nXDSTblName=nXDS ] {
+  The Edwards nXDS is a scroll pump.
+
+  Generated nXDS.tbl will define [nXDS] by default for inclusion
+  in another screen definition. Specifying nXDSTblName= will
+  make it a standalone screen definition. The actual screen
+  target must be specified at a higher level.
+
+  This module definition does not account for the following:
+    -There is no support for
+      =disable substitution in genui
+}
+
+mode (default) {
+  tmcbase = nXDS.tmc
+  colbase = nXDS_col.tmc
+  cmdbase = nXDS.cmd
+  genuibase = nXDS.genui
+  extbase = nXDS_conv.tmc
+  - : nXDS.tbl:nXDS.tbl.in
+  DISTRIB = @MODDIR@/../nXDS
+  CPPFLAGS = -I @MODDIR@/..
+  %%
+@MODDIR@/../nXDS :
+	cd @MODDIR@/.. && make
+}
+
+mode (remote) {
+  tmcbase = nXDS.tmc
+  colbase = nXDS_col.tmc
+  genuibase = nXDS.genui
+  extbase = nXDS_conv.tmc
+  - : nXDS.tbl:nXDS.tbl.in
+  CPPFLAGS = -I @MODDIR@/..
+}
+
+%%
+.PHONY : clean-nXDS
+clean-dist : clean-nXDS
+clean-nXDS :
+	cd @MODDIR@/.. && make clean

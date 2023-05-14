@@ -1,0 +1,7 @@
+display ToFdisp
+display UPdisp
+display ToFBdisp
+display TwisTorrdisp
+client ToFclt
+memo
+batchfile interact

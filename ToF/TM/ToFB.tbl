@@ -1,0 +1,8 @@
+Input "nXDS.tbl";
+Input "gpsd.tbl";
+Input "UPS.tbl";
+
+{ HBox { |+; { [gpsd]; [nXDS] }; |+; [UPS]; |+ };
+  -;
+  HBox { HGlue 0+1; { (flttime,9) MFCtr: (MFCtr,5) } }
+}

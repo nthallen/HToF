@@ -1,0 +1,116 @@
+HEADER Time of Flight Instrument
+MNEMONIC ToF
+HOMEDIR ToF_Data_Dir
+ROWS 18
+  1 MFC_S1 Flows S1
+  1 MFC_S1_sp Flows S1
+  1 MFC_S2 Flows S2
+  1 MFC_S2_sp Flows S2
+  1 ZF2_F Flows ZF2
+  1 ZF2_F_sp Flows ZF2
+  1 Tot_F Flows Total
+  1 Tot_F_sp Flows Total
+  
+  1 T1 GasDeck Temp
+ 10 T3 GasDeck Temp
+  1 T3_1Hz GasDeck Temp
+ 10 T4 GasDeck Temp
+  1 T4_1Hz GasDeck Temp
+  1 INTP GasDeck mbar
+  1 CALP GasDeck mbar
+  1 CalT GasDeck Temp
+ 10 InH_P GasDeck mbar
+ 10 InL_P GasDeck mbar
+  1 PT_P GasDeck mbar
+  1 GBH_P GasDeck psi
+  1 GBL_P GasDeck psi
+  1 AI_SP1 GasDeck Volts
+  
+ 10 InL_P Inlet P
+  1 InLP_1Hz Inlet P Avg
+  1 InPset Inlet P SetPt
+  
+  #1 AII_DS0
+  1 AmbZeroS:AII_DS0:0 GasCmds Status
+  1 Bypass_cal:Herc_DS_A:0 GasCmds Status
+  1 Scrub_cal:Herc_DS_A:1 GasCmds Status
+  1 H2O2_cal:Herc_DS_A:2 GasCmds Status
+  1 Oacid_cal:Herc_DS_A:3 GasCmds Status
+  1 MHP_cal:Herc_DS_A:4 GasCmds Status
+  1 Spare1_cal:Herc_DS_A:5 GasCmds Status
+  1 Spare2_cal:Herc_DS_A:6 GasCmds Status
+  1 Amb_zero:Herc_DS_A:7 GasCmds Status
+  #1 SpVlv1S:AII_DS0:1 GasCmds Status
+  #1 SpVlv2S:AII_DS0:2 GasCmds Status
+  #1 SpVlv3S:AII_DS0:3 GasCmds Status
+  #1 SpVlv4S:AII_DS0:4 GasCmds Status
+  #1 SpVlv5S:AII_DS0:5 GasCmds Status
+  #1 SpVlv6S:AII_DS0:6 GasCmds Status
+  #1 SpVlv7S:AII_DS0:7 GasCmds Status
+  
+  1 TPA_BT Turbos Temp
+  1 TPB_BT Turbos Temp
+# 1 TPA_BT_F5 Turbos Temp
+# 1 TPB_BT_F5 Turbos Temp
+  1 TPA_Cmon Turbos Current
+  1 TPB_Cmon Turbos Current
+  1 TPA_OK Turbos OK
+  1 TPB_OK Turbos OK
+  1 TPA_Spd Turbos Speed
+  1 TPB_Spd Turbos Speed
+  1 TPA_TV Turbos TV
+  1 TPB_TV Turbos TV
+  1 TPBx_TV Turbos TV
+  1 TPB_Enb:Herc_DS_C:4   Turbos Status
+  1 TPA_Enb:Herc_DS_C:5   Turbos Status
+  1 TPA_Start:Herc_DS_C:6 Turbos Status
+  1 TPB_Start:Herc_DS_D:0 Turbos Status
+  1 TPA_Low:Herc_DS_C:7   Turbos Status
+  1 TPB_Low:Herc_DS_D:1   Turbos Status
+  
+  
+  
+  1 Oct_Amp_RB Octopole Amp
+  1 Oct_Amp_sp Octopole Amp
+  1 Oct_Bias_RB Octopole Bias
+  1 Oct_Bias_sp Octopole Bias
+  1 Oct_Drive_RB Octopole Drive
+  
+  1 FlySt FlyValve Set
+  1 Fly_Pos_RB FlyValve Pos
+  1 Fly_Press_RB FlyValve P
+  1 Fly_Op_RB:Herc_DS_E:2 FlyValve Status
+  1 Fly_Cl_RB:Herc_DS_E:4 FlyValve Status
+  1 Fly_Rdy_RB:Herc_DS_E:5 FlyValve Status
+  1 Fly_Alrm_RB:Herc_DS_E:7 FlyValve Status
+  1 Bfly_Mode:Herc_DS_D:4 FlyValve Status
+  1 Fly_Hold:Herc_DS_D:2 FlyValve Status
+  1 Fly_Close:Herc_DS_D:3 FlyValve Status
+  1 Fly_Open:Herc_DS_D:5 FlyValve Status
+  
+  1 HV_Pwr_S:Herc_DS_D:6 Misc Status
+  1 Oct_Pwr_S:Herc_DS_D:7 Misc Status
+  1 Relay_28_RB:Herc_DS_E:1 Misc Status
+  1 TPSP_RB:Herc_DS_E:0 Misc Status
+  1 FTSP_RB:Herc_DS_E:3 Misc Status
+  1 SpAI1 Inlet TV 
+
+  1 AII_Stat SWStatus AII %.0lf
+  1 SWFlow SWStatus SWFlow
+  1 InP_Pgain SWStatus InP Pgain
+  1 InP_igain SWStatus InP Igain
+  1 SWStat SWStatus SWStat
+
+  1 CPU_Pct System CPU
+  1 Disk System Disk
+  1 SysTDrift System TDrift
+
+  # 1 SpAO1_sp
+  # 1 Herc_DS_A
+  # 1 Herc_DS_C
+  # 1 Herc_DS_D
+  # 1 Herc_DS_E
+  # 8 MFCtr
+  # 8 Synch
+  # 0 Bfly_Ctrl Hercules_conv.tmc
+  # 1 HoribaS
