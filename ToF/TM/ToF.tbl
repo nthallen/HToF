@@ -16,19 +16,6 @@ Flows {
   ZF2_F:  (ZF2_F_sp,6)  (ZF2_F,6) sccm;
   Tot_F:  (Tot_F_sp,6)  (Tot_F,6) slm;
 }
-#Horiba {
-#  HBox{ +-; Title: "Horiba"; -+ };
-#  ""       Set     Flow;
-#  Dilution: >HBox{(DilFlowSP,5); (DilFlowSP_Stat,1)}
-#            >HBox{(DilFlow,5); (DilFlow_Stat,1)} sccm;
-#  IonSrc:   >HBox{(IonSrcFlowSP,5); (IonSrcFlowSP_Stat,1)}
-#            >HBox{(IonSrcFlow,5); (IonSrcFlow_Stat,1)} sccm;
-#  Fluorine: >HBox{(FFlowSP,5); (FFlowSP_Stat,1)}
-#            >HBox{(FFlow,5); (FFlow_Stat,1)} sccm;
-#  Pressure: >HBox{(HoribaPSP,6); (HoribaPSP_Stat,1)}
-#            >HBox{(HoribaP,6); (HoribaP_Stat,1)} mbar;
-#  { Cmd: (HCmd_Stat,2) HGlue 0+1 Stale: (Horiba_Stale,3) }
-#}
 
 GasV {
   HBox{ +-; Title: "Gas Deck"; -+ };
@@ -78,7 +65,7 @@ Status {
 
 Turbo {
   HBox{ +-; Title: "Ex Turbo Chans"; -+ };
-  ""     >1<           >2<;
+  ""     >"1"<         >"2"<;
 # Pwr:   (TPA_Enb,3)   (TPB_Enb,3) V;
 # ""     (TPA_Low,4)   (TPB_Low,4) V;
 # ""     (TPA_Start,5) (TPB_Start,5) V;
@@ -138,6 +125,7 @@ Misc {
   Relay28: (Relay_28_RB,3);
   SpAI1:   (SpAI1,6) V;
   SpAO1:   (SpAO1_sp,6) V;
+  SysTDrift: (SysTDrift,7) secs;
 }
 
 IWG1 {
@@ -147,15 +135,14 @@ IWG1 {
   Stale: (ChemWAD_Stale,3);
 }
 
-TDrift {
-  HBox{ +-; Title: "System TDrift"; -+ };
-  SysTDrift: (SysTDrift,7) secs;
-}
+# TDrift {
+#   HBox{ +-; Title: "System TDrift"; -+ };
+# }
 
 { HBox{
-    { [Flows]; [Horiba]; [Turbo]; }; |+;
-    { [Fly]; [zaber]; [GasV]; VGlue 0+1; [TDrift] }; |+;
+    { [Flows]; [Horiba]; [Turbo]; [Misc]; }; |+;
+    { [Fly]; [zaber]; [GasV]; VGlue 0+1; }; |+;
     { [GasCmds]; [Scroll] }; |+;
-    { [IG]; [Oct]; [Misc]; [IWG1]; VGlue 0+1; [Status] }
+    { [IG]; [Oct]; [IWG1]; VGlue 0+1; [Status] }
   }
 }
