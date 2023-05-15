@@ -26,15 +26,15 @@ genuibase = ToF.genui
 Module Horiba mode=driver src=Horiba.txt
 Module IonGauge mode=default Hz=1
 Module nXDS mode=default
-Module OMS mode=Y OMS1=Insl Group=Inlet Hz=5
+# Module OMS mode=Y OMS1=Insl Group=Inlet Hz=5
 Module UPS mode=default
 Module gpsd mode=default
 #Module IWG1 mode=UserPkts2
 Module UserPkts3 src=UP.txt name=UP
-Module Zaber mode=default
+Module Zaber mode=dual
 Module Sonic mode=disable Hz=8
 Module Zeno mode=disable
-Module TwisTorr drives=AB
+Module TwisTorr drives=ABC
 
 SCRIPT = interact runfile.AII runfile.AIIa
 SCRIPT = mv_ext.sh
@@ -60,7 +60,7 @@ ToFext : ToF.cdf
 #ToFjsonext : ToFzjson.cdf
 ToFjsonext : ToFbjson.cdf UP.genui
 
-ToFalgo : tpfilt.tmc ToF.tma ToF.sws Inlet.tma turbo.tma gasdeck.tma
+ToFalgo : ToF.tma ToF.sws Inlet.tma gasdeck.tma
 # Inlet.tma
 doit : ToF.doit
 #doit : ToFz.doit

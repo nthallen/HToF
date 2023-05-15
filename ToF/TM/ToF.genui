@@ -48,25 +48,25 @@ ROWS 18
   #1 SpVlv6S:AII_DS0:6 GasCmds Status
   #1 SpVlv7S:AII_DS0:7 GasCmds Status
   
-  1 TPA_BT Turbos Temp
-  1 TPB_BT Turbos Temp
+# 1 TPA_BT Turbos Temp
+# 1 TPB_BT Turbos Temp
 # 1 TPA_BT_F5 Turbos Temp
 # 1 TPB_BT_F5 Turbos Temp
-  1 TPA_Cmon Turbos Current
-  1 TPB_Cmon Turbos Current
-  1 TPA_OK Turbos OK
-  1 TPB_OK Turbos OK
-  1 TPA_Spd Turbos Speed
-  1 TPB_Spd Turbos Speed
-  1 TPA_TV Turbos TV
-  1 TPB_TV Turbos TV
-  1 TPBx_TV Turbos TV
-  1 TPB_Enb:Herc_DS_C:4   Turbos Status
-  1 TPA_Enb:Herc_DS_C:5   Turbos Status
-  1 TPA_Start:Herc_DS_C:6 Turbos Status
-  1 TPB_Start:Herc_DS_D:0 Turbos Status
-  1 TPA_Low:Herc_DS_C:7   Turbos Status
-  1 TPB_Low:Herc_DS_D:1   Turbos Status
+# 1 TPA_Cmon Turbos Current
+# 1 TPB_Cmon Turbos Current
+# 1 TPA_OK Turbos OK
+# 1 TPB_OK Turbos OK
+# 1 TPA_Spd Turbos Speed
+# 1 TPB_Spd Turbos Speed
+  1 TV1 Turbos TV
+  1 TV2 Turbos TV
+  1 xTV2 Turbos TV
+# 1 TPB_Enb:Herc_DS_C:4   Turbos Status
+# 1 TPA_Enb:Herc_DS_C:5   Turbos Status
+# 1 TPA_Start:Herc_DS_C:6 Turbos Status
+# 1 TPB_Start:Herc_DS_D:0 Turbos Status
+# 1 TPA_Low:Herc_DS_C:7   Turbos Status
+# 1 TPB_Low:Herc_DS_D:1   Turbos Status
   
   
   

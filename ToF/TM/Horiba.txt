@@ -7,6 +7,6 @@ Data IonSrcFlow   2 sccm %5.1lf "Ion Source Flow"
 Data FFlow        3 sccm %6.3lf "Fluorine Flow"
 Data HoribaP      4 mbar %6.1lf "" 30.
 Data CalFlow      5 sccm %6.3lf "Cal Flow"
-Data ZeroFlow     6 sccm %6.1lf "Zero Flow"
+Data CalDil       6 sccm %6.1lf "Cal Dilution"
 Data Cal2Flow     7 sccm %6.3lf "Cal2 Flow"
-
+Data ZeroFlow2    8 sccm %6.1lf "Zero Flow2"

@@ -77,17 +77,17 @@ Status {
 }
 
 Turbo {
-  HBox{ +-; Title: "Turbo Pumps"; -+ };
-  ""     >A<           >B<;
-  Pwr:   (TPA_Enb,3)   (TPB_Enb,3) V;
-  ""     (TPA_Low,4)   (TPB_Low,4) V;
-  ""     (TPA_Start,5) (TPB_Start,5) V;
-  BT:    (TPA_BT,6)    (TPB_BT,6) V;
-  Cmon:  (TPA_Cmon,6)  (TPB_Cmon,6) A;
-  OK:    (TPA_OK,6)    (TPB_OK,6) V;
-  Spd:   (TPA_Spd,6)   (TPB_Spd,6) V;
-  TV:    (TPA_TV,6)    (TPB_TV,6) V;
-  xTV:   ""            (TPBx_TV,6) V;
+  HBox{ +-; Title: "Ex Turbo Chans"; -+ };
+  ""     >1<           >2<;
+# Pwr:   (TPA_Enb,3)   (TPB_Enb,3) V;
+# ""     (TPA_Low,4)   (TPB_Low,4) V;
+# ""     (TPA_Start,5) (TPB_Start,5) V;
+# BT:    (TPA_BT,6)    (TPB_BT,6) V;
+# Cmon:  (TPA_Cmon,6)  (TPB_Cmon,6) A;
+# OK:    (TPA_OK,6)    (TPB_OK,6) V;
+# Spd:   (TPA_Spd,6)   (TPB_Spd,6) V;
+  TV:    (TV1,6)       (TV2,6) V;
+  xTV:   ""            (xTV2,6) V;
 }
 
 Scroll {
@@ -96,12 +96,12 @@ Scroll {
   Turbo:       (TPSP_RB,3);
 }
 
-OMS {
-  HBox{ +-; Title: "Inlet Slit"; -+ };
-  Step: (Insl_Step,9);
-  Stat: (Insl_Stat,4);
-  Stale: (OMS_Stale,3);
-}
+# OMS {
+#   HBox{ +-; Title: "Inlet Slit"; -+ };
+#   Step: (Insl_Step,9);
+#   Stat: (Insl_Stat,4);
+#   Stale: (OMS_Stale,3);
+# }
 
 Fly {
   HBox{ +-; Title: "Fly Valve"; -+ };
@@ -155,7 +155,7 @@ TDrift {
 { HBox{
     { [Flows]; [Horiba]; [Turbo]; }; |+;
     { [Fly]; [zaber]; [GasV]; VGlue 0+1; [TDrift] }; |+;
-    { [GasCmds]; [Scroll]; [OMS] }; |+;
+    { [GasCmds]; [Scroll] }; |+;
     { [IG]; [Oct]; [Misc]; [IWG1]; VGlue 0+1; [Status] }
   }
 }

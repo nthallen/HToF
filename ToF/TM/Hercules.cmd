@@ -37,8 +37,8 @@
   : Cal MHP { $0 = 8; }
   : Cal Spare1 { $0 = 10; }
   : Cal Spare2 { $0 = 12; }
-  : Turbopump B power { $0 = 26; }
-  : Turbopump A power { $0 = 28; }
+# : Turbopump B power { $0 = 26; }
+# : Turbopump A power { $0 = 28; }
   : HV Power { $0 = 40; }
   : Oct Power { $0 = 42; }
   ;
@@ -46,14 +46,14 @@
 &Herc_Cmd <unsigned short>
   : Ambient Zero Off { $0 = 14; }
   : Ambient Zero On { $0 = 15; }
-  : Turbopump A Stop { $0 = 30; }
-  : Turbopump A Start { $0 = 31; }
-  : Turbopump B Stop { $0 = 34; }
-  : Turbopump B Start { $0 = 35; }
-  : Turbopump A High { $0 = 32; }
-  : Turbopump A Low { $0 = 33; }
-  : Turbopump B High { $0 = 36; }
-  : Turbopump B Low { $0 = 37; }
+# : Turbopump A Stop { $0 = 30; }
+# : Turbopump A Start { $0 = 31; }
+# : Turbopump B Stop { $0 = 34; }
+# : Turbopump B Start { $0 = 35; }
+# : Turbopump A High { $0 = 32; }
+# : Turbopump A Low { $0 = 33; }
+# : Turbopump B High { $0 = 36; }
+# : Turbopump B Low { $0 = 37; }
   : Butterfly Valve Position Mode { $0 = 38; }
   : Butterfly Valve Pressure Mode { $0 = 39; }
   : Butterfly Valve hold { $0 = 44; }

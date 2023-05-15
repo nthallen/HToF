@@ -15,10 +15,12 @@ On_Off_t Spare2_cal; Invalidate Spare2_cal;
 On_Off_t Amb_zero; Invalidate Amb_zero;
   { Amb_zero = (Herc_DS_A>>7) & 1; Validate Amb_zero; }
 
+/*
 On_Off_t TPB_Enb; Invalidate TPB_Enb;
   { TPB_Enb = (Herc_DS_C>>4) & 1; Validate TPB_Enb; }
 On_Off_t TPA_Enb; Invalidate TPA_Enb;
   { TPA_Enb = (Herc_DS_C>>5) & 1; Validate TPA_Enb; }
+*/
 On_Off_t HV_Pwr_S; Invalidate HV_Pwr_S;
   { HV_Pwr_S = (Herc_DS_D>>6) & 1; Validate HV_Pwr_S; }
 On_Off_t Oct_Pwr_S; Invalidate Oct_Pwr_S;
@@ -39,6 +41,7 @@ On_Off_t Fly_Alrm_RB; Invalidate Fly_Alrm_RB;
   { Fly_Alrm_RB = (Herc_DS_E>>7) & 1; Validate Fly_Alrm_RB; }
 
 
+/*
 Start_t TPA_Start; Invalidate TPA_Start;
   { TPA_Start = (Herc_DS_C>>6) & 1; Validate TPA_Start; }
 Low_High_t TPA_Low; Invalidate TPA_Low;
@@ -47,6 +50,7 @@ Start_t TPB_Start; Invalidate TPB_Start;
   { TPB_Start = (Herc_DS_D>>0) & 1; Validate TPB_Start; }
 Low_High_t TPB_Low; Invalidate TPB_Low;
   { TPB_Low = (Herc_DS_D>>1) & 1; Validate TPB_Low; }
+*/
 Bfly_Mode_t Bfly_Mode; Invalidate Bfly_Mode;
   { Bfly_Mode = (Herc_DS_D>>4) & 1; Validate Bfly_Mode; }
 
