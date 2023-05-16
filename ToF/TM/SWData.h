@@ -12,13 +12,8 @@ typedef struct __attribute__((__packed__)) {
 extern SWData_t SWData;
 
 #define SWS_FLOWSTATE_OFF 1
-#define SWS_TURBOS_ON 90
-#define SWS_TURBOS_OFF 91
 #define SWS_PUMPS_ON 96
 #define SWS_PUMPS_OFF 97
-#define SWS_INLET_PCTRL 100
-#define SWS_INLET_IDLE 101
-#define SWS_INLET_LAB 102
 #define SWS_TOF_START 110
 #define SWS_TOF_STOP 111
 #define SWS_DATA_LOOP 115

@@ -1,5 +1,5 @@
-function pToFtwistorra(varargin);
-% pToFtwistorra( [...] );
+function pToFtta(varargin);
+% pToFtta( [...] );
 % Twis Torr Aflags
 h = ne_dstat({
   'TTA_Start', 'TTA_flags', 0; ...

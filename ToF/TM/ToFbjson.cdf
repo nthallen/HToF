@@ -1,4 +1,4 @@
-json ToFeng_1 73
+json ToFeng_1 65
   0 TToFeng_1 %.3lf
   1 AI_SP1
   2 AII_DS0
@@ -55,23 +55,15 @@ json ToFeng_1 73
   53 ToF_P
   54 Tot_F
   55 Tot_F_sp
-  56 TPA_BT
-  57 TPA_Cmon
-  58 TPA_OK
-  59 TPA_Spd
-  60 TPA_TV
-  61 TPB_BT
-  62 TPB_Cmon
-  63 TPB_OK
-  64 TPB_Spd
-  65 TPB_TV
-  66 TPBx_TV
-  67 Z1pos
-  68 Z1stale
-  69 Z1V
-  70 ZF2_F
-  71 ZF2_F_sp
-  72 Zstale
+  56 Z1pos
+  57 Z1stale
+  58 Z1V
+  59 Z2pos
+  60 Z2V
+  61 Z2stale
+  62 Zstale
+  63 ZF2_F
+  64 ZF2_F_sp
 # json ToFeng_5 4
 #   0 TToFeng_5 %.3lf
 #   1 Insl_Stat %.0lf

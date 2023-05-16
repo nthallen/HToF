@@ -20,13 +20,8 @@
 &SWStat <unsigned char>
   : Flow State Off { $0 = SWS_FLOWSTATE_OFF; }
   : Set %d { $0 = $2; }
-  : Turbo Pumps On { $0 = SWS_TURBOS_ON; }
-  : Turbo Pumps Off { $0 = SWS_TURBOS_OFF; }
   : Pumps On { $0 = SWS_PUMPS_ON; }
   : Pumps Off { $0 = SWS_PUMPS_OFF; }
-  : Inlet Pressure Control { $0 = SWS_INLET_PCTRL; }
-  : Inlet Close { $0 = SWS_INLET_IDLE; }
-  : Inlet Lab { $0 = SWS_INLET_LAB; }
   : ToF Start { $0 = SWS_TOF_START; }
   : ToF Stop { $0 = SWS_TOF_STOP; }
   : Data loop start { $0 = SWS_DATA_LOOP; }

@@ -12,13 +12,15 @@ State Initialize {
 }
 
 State Quick_Shutdown {
-      Hold until valid (Inlet_Closed, Iris_Closed) or 1:00;
+#     Hold until valid (Inlet_Closed, Iris_Closed) or 1:00;
+      Hold until valid (Iris_Closed) or 1:00;
    +3 > Quit
 }
 
 State Shutdown {
       Validate Flows_OFF;
-   +1 Hold until valid (Inlet_Closed, Iris_Closed, GD_Wait) or 1:00;
+#  +1 Hold until valid (Inlet_Closed, Iris_Closed, GD_Wait) or 1:00;
+   +1 Hold until valid (Iris_Closed, GD_Wait) or 1:00;
    +3 > Quit
 }
 
@@ -29,12 +31,12 @@ State ToF_idle { }
 State ToF_start {
 	Validate pumps_on;
 	+10 Hold until valid ( pumps_idle );
-        > sw status Turbo pumps on
-        +3 Hold until ( convert(TPB_SPD) > 9.5 );
+#       > sw status Turbo pumps on
+#       +3 Hold until ( convert(TPB_SPD) > 9.5 );
         > Set oct bias 0.5 volts
         > Set oct amp 0.80 volts
         { if (convert(InL_P) < 45) {
-		ci_sendfcmd(0,"zaber move iris absolute 115000\n");
+		ci_sendfcmd(0,"zaber move Drive 1 absolute 115000\n");
 	}}
 	+1 Validate Flows_ON_Z_N2;
 	+1 hold until valid (GD_Wait);
@@ -44,7 +46,7 @@ State ToF_start {
 State ToF_stop {
 	   Validate Flows_OFF;
 	+1 hold until valid (GD_Wait);
-        +2 > zaber move iris absolute 0
+        +2 > zaber move Drive 1 absolute 0
 	+1 > set oct amp 0 volts
 	   > set oct bias 0 volts
 	   > set ion source flow 300 sccm
@@ -79,8 +81,8 @@ State pumps_on {
 }
 
 State pumps_off { 
-	> zaber move iris absolute 0
-	+4 > sw status turbo pumps off
+	> zaber move Drive 1 absolute 0
+#    +4 > sw status turbo pumps off
 	+2 > Turbo scroll pump valve off
 	+1 > Turbo scroll pump off
         +1 > nxds a stop

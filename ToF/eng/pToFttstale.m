@@ -1,5 +1,5 @@
-function pToFtwistorrstale(varargin);
-% pToFtwistorrstale( [...] );
+function pToFttstale(varargin);
+% pToFttstale( [...] );
 % Twis Torr Stale
 h = timeplot({'TT_stale'}, ...
       'Twis Torr Stale', ...

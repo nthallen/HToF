@@ -1,5 +1,5 @@
-function pToFtwistorrb(varargin);
-% pToFtwistorrb( [...] );
+function pToFttb(varargin);
+% pToFttb( [...] );
 % Twis Torr Bflags
 h = ne_dstat({
   'TTB_Start', 'TTB_flags', 0; ...

@@ -3,7 +3,7 @@
 #define ZABER_H_INCLUDED
 
 
-#define N_DRIVES 1
+#define N_DRIVES 2
 typedef unsigned char drv_t;
 typedef struct __attribute__((__packed__)) {
   drv_t drive;
