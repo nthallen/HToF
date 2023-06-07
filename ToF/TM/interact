@@ -32,5 +32,6 @@
   Launch - IWG1
 # Launch - UserPkts2 -p 5100 -p 5558
 # Launch - Zeno_Ser -d /dev/ser4
+  Launch - gpsd_client
   Launch - ups -p /dev/ser3 -n tripherc -e triple
   Launch - ToFalgo -v
