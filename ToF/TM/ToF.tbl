@@ -115,9 +115,10 @@ Oct {
 
 zaber {
   HBox { +-; Zaber; -+ };
-  Position: (Z1pos,7);
-  Voltage:  (Z1V,4) V;
-  Stale:  (Z1stale,3) (Zstale,3);
+  ""        >Z1<       >Z2<;
+  Position: (Z1pos,7)  (Z2pos,7);
+  Voltage:  (Z1V,4)    (Z2V,7)   V;
+  Stale:  (Z1stale,3)  (Z2stale) (Zstale,3);
 }
 
 Misc {
@@ -140,8 +141,8 @@ IWG1 {
 # }
 
 { HBox{
-    { [Flows]; [Horiba]; [Turbo]; [Misc]; }; |+;
-    { [Fly]; [zaber]; [GasV]; VGlue 0+1; }; |+;
+    { [Flows]; [Horiba]; [Turbo]; [zaber]; [Misc]; }; |+;
+    { [Fly]; [GasV]; VGlue 0+1; }; |+;
     { [GasCmds]; [Scroll] }; |+;
     { [IG]; [Oct]; [IWG1]; VGlue 0+1; [Status] }
   }
